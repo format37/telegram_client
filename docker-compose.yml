@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+
+  collector:
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./data:/service/data:rw
+    build: collector
+    environment:
+      - TZ=Europe/Moscow
+      # https://my.telegram.org/apps
+      - PHONE_NUMBER=
+      - API_ID=
+      - API_HASH=
+      - APP_TITLE=
+      - PASSWORD=
